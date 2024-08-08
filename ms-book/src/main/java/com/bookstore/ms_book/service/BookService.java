@@ -21,6 +21,7 @@ public class BookService {
     //create book
     public BookResponse addBook(BookRequest request){
         Book book = Book.builder()
+                .id(request.id())
                 .title(request.title())
                 .author(request.author())
                 .description(request.description())
